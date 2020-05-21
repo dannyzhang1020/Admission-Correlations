@@ -1,0 +1,5 @@
+toefl <- ggplot(x, aes(x = TOEFL.Score, y = Chance.of.Admit)) + geom_point(size = 0.5) + labs(title = "UCLA Grad Admissions, Admission Rate VS TOEFL Score") + xlab("TOEFL Score") + ylab("Admission Rate")
+gre <- ggplot(x, aes(x = GRE.Score, y = Chance.of.Admit)) + geom_point(size = 0.5) + labs(title = "UCLA Grad Admissions, Admission Rate VS GRE Score") + xlab("GRE Score") + ylab("Admission Rate")
+lm(data = x, formula = TOEFL.Score ~ Chance.of.Admit)
+lm(data = x, formula = GRE.Score ~ Chance.of.Admit)
+grid.arrange(toefl, gre, ncol=2)
