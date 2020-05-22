@@ -3,3 +3,6 @@ gre <- ggplot(x, aes(x = GRE.Score, y = Chance.of.Admit)) + geom_point(size = 0.
 lm(data = x, formula = TOEFL.Score ~ Chance.of.Admit)
 lm(data = x, formula = GRE.Score ~ Chance.of.Admit)
 grid.arrange(toefl, gre, ncol=2)
+t.test(x[[2]],x[[9]])
+t.test(x[[3]],x[[9]])
+plot(x)
